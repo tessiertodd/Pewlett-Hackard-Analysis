@@ -10,10 +10,10 @@ dept_no varchar pk fk - Salaries.emp_no
 from_date date
 to_date date
 
-Managers
+Dept_manager
 -
-emp_no int pk fk - Employees.emp_no
 dept_no varchar pk fk - Departments.dept_no
+emp_no int pk fk - Employees.emp_no
 from_date date
 to_date date
 
@@ -39,3 +39,4 @@ emp_no int pk fk - Employees.emp_no
 title varchar
 from_date date
 to_date date
+    
