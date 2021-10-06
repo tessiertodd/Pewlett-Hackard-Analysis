@@ -267,3 +267,13 @@ INNER JOIN dept_emp AS de
 ON (ce.emp_no=de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no=d.dept_no);
+
+-- Create list of sales departments retirees
+SELECT di.emp_no,di.first_name,di.last_name,di.dept_name
+FROM dept_info AS di
+WHERE (di.dept_name='Sales');
+
+-- Create list of sales and development departments retirees
+SELECT emp_no,first_name,last_name,dept_name
+FROM dept_infO
+WHERE dept_name IN ('Sales','Development');
