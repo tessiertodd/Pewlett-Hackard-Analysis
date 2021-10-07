@@ -30,3 +30,20 @@ JOIN titles AS t
 ON(t.emp_no=e.emp_no)
 WHERE de.to_date='9999-01-01'AND (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY e.emp_no;
+
+-- Total summary of people retiring
+SELECT SUM("People retiring")
+FROM retiring_titles;
+
+
+SELECT * FROM mentorship_eligibility;
+
+-- Total summary of people eligible for a mentorship program
+SELECT COUNT(emp_no)
+FROM mentorship_eligibility;
+
+-- Total summary of people eligible for a mentorship program - group by title
+SELECT COUNT(emp_no) AS "Total Count", title
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY "Total Count" DESC;
